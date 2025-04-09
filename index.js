@@ -1,4 +1,20 @@
-// ####### Rest of scene #######
+const thumbnails = {
+    "Kaptain": "img/Kaptajn_Jakob.png"
+}
+
+const thumbnailImage = document.createElement("img");
+thumbnailImage.id = "thumbnail";
+document.body.appendChild(thumbnailImage);
+
+function display_thumbnail(str) {
+    console.log(str);
+    
+    if (str in thumbnails) {
+        thumbnailImage.src = thumbnails[str];
+    }
+}
+
+window.display_thumbnail = display_thumbnail;
 
 const virtRoot = document.createElement("div");
 
@@ -66,7 +82,7 @@ import QrScanner from "/qr-scanner.min.js";
 // Function for setting result 
 function setResult(result) {
     // if (result.data in characters.keys()) {
-    window.Engine.play("Admiral");
+    window.Engine.play("Person1");
     console.log(result.data);
     // }
 }
