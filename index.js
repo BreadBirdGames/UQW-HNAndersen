@@ -1,5 +1,7 @@
 // ####### Rest of scene #######
 
+const virtRoot = document.createElement("div");
+
 // create QRVideo
 const qrVideo = document.createElement("video");
 qrVideo.id = "qr-video"
@@ -28,9 +30,9 @@ logButton.id = "log-button";
 logButton.innerHTML = '<i class="fa-solid fa-scroll"></i>';
 // Log button click
 function logClick() {
-    if (document.body.classList.contains("current-is-right")) {
-        document.body.classList.remove("current-is-right");
-        document.body.classList.add("current-is-left");
+    if (virtRoot.classList.contains("current-is-right")) {
+        virtRoot.classList.remove("current-is-right");
+        virtRoot.classList.add("current-is-left");
     }
 }
 logButton.addEventListener("click", logClick);
@@ -41,19 +43,21 @@ cameraButton.id = "camera-button";
 cameraButton.innerHTML = '<i class="fa-solid fa-camera-retro"></i>';
 // Camera button click
 function cameraClick() {
-    if (document.body.classList.contains("current-is-left")) {
-        document.body.classList.remove("current-is-left");
-        document.body.classList.add("current-is-right");
+    if (virtRoot.classList.contains("current-is-left")) {
+        virtRoot.classList.remove("current-is-left");
+        virtRoot.classList.add("current-is-right");
     }
 }
 cameraButton.addEventListener("click", cameraClick);
 buttonContainer.appendChild(cameraButton);
 
-document.body.appendChild(buttonContainer);
-document.body.appendChild(tabL);
-document.body.appendChild(tabR);
+virtRoot.appendChild(buttonContainer);
+virtRoot.appendChild(tabL);
+virtRoot.appendChild(tabR);
 
-document.body.classList.add("current-is-right");
+virtRoot.classList.add("current-is-right");
+
+document.body.appendChild(virtRoot);
 
 // ####### Web Cam Scanning #######
 
