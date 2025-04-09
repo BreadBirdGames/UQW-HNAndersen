@@ -1,0 +1,56 @@
+html, body {
+    overflow: hidden;
+    --color-1:  #c1d6ac;
+    --color-2:  #679e85;
+    --color-3:  #367783;
+    --color-4:  #05192f;
+    --color-5:  #000000;
+    background-color: var(--color-5);
+}
+
+#ui-bar {
+	display: none;
+}
+
+#qr-video {
+	position: absolute;
+  	top: 0;
+ 	left: 0;
+  	width: 100vw;
+}
+
+#button-container {
+	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	width: 100vw;
+  	display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+#log-button, #camera-button {
+  	margin-top: -2.5vh;
+	width: 50vw;
+  	height: 10vh;
+  	background-color: var(--color-5);
+  	border: none;
+  	border-top: 2px solid var(--color-1);
+    font-size: 1.5em;
+    color: var(--color-1);
+}
+
+#log-button.current, #camera-button.current {
+	transform: translateY(1.35vh);
+    background-color: var(--color-2);
+}
+
+#log-button {
+	border-top-right-radius: 10px;
+}
+
+#camera-button {
+	border-top-left-radius: 10px;
+}
