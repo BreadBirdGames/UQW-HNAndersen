@@ -16,7 +16,7 @@ html, body {
 	position: absolute;
   	top: 0;
  	left: 0;
-  	width: 100vw;
+  	width: 100%;
 }
 
 #button-container {
@@ -29,6 +29,7 @@ html, body {
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
+    z-index: 1;
 }
 
 #log-button, #camera-button {
@@ -42,7 +43,7 @@ html, body {
     color: var(--color-1);
 }
 
-#log-button.current, #camera-button.current {
+.current-is-left #log-button, .current-is-right #camera-button {
 	transform: translateY(1.35vh);
     background-color: var(--color-2);
 }
@@ -53,4 +54,21 @@ html, body {
 
 #camera-button {
 	border-top-left-radius: 10px;
+}
+
+.tabs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+.current-is-right #left-tab {
+    display: none;
+}
+
+.current-is-left #right-tab {
+    display: none;
 }
