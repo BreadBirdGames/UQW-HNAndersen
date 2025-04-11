@@ -7,6 +7,10 @@ thumbnailImage.id = "thumbnail";
 document.body.appendChild(thumbnailImage);
 
 function display_thumbnail(str) {
+    if (!window.ready) {
+        return;
+    }
+
     console.log(str);
     
     if (str in thumbnails) {
@@ -46,6 +50,10 @@ logButton.id = "log-button";
 logButton.innerHTML = '<i class="fa-solid fa-scroll"></i>';
 // Log button click
 function logClick() {
+    if (!window.ready) {
+        return;
+    }
+
     if (virtRoot.classList.contains("current-is-right")) {
         virtRoot.classList.remove("current-is-right");
         virtRoot.classList.add("current-is-left");
@@ -59,6 +67,10 @@ cameraButton.id = "camera-button";
 cameraButton.innerHTML = '<i class="fa-solid fa-camera-retro"></i>';
 // Camera button click
 function cameraClick() {
+    if (!window.ready) {
+        return;
+    }
+
     if (virtRoot.classList.contains("current-is-left")) {
         virtRoot.classList.remove("current-is-left");
         virtRoot.classList.add("current-is-right");
@@ -81,6 +93,10 @@ import QrScanner from "/qr-scanner.min.js";
 
 // Function for setting result 
 function setResult(result) {
+    if (!window.ready) {
+        return;
+    }
+
     // if (result.data in characters.keys()) {
     window.Engine.play("Person1");
     console.log(result.data);
