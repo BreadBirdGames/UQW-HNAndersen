@@ -111,3 +111,19 @@ const scanner = new QrScanner(qrVideo, result => setResult(result), {
 });
 
 scanner.start();
+
+// ###########3 idfk
+
+const dialogueBox = document.getElementById("story");
+
+// hide dialogue box if empty
+window.conversationStart = function (ev) {
+    console.log(ev);
+    
+	if (ev.passage["name"] == "End conversation") {
+        dialogueBox.classList.add("hidden");
+        thumbnailImage.src = "";
+    } else {
+        dialogueBox.classList.remove("hidden");
+    }
+};

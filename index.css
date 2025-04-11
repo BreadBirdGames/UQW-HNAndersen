@@ -104,3 +104,7 @@ html, body {
     padding-top: 5vh;
     z-index: 3;
 }
+
+.hidden {
+    display: none !important;
+}
