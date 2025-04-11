@@ -118,8 +118,7 @@ const dialogueBox = document.getElementById("story");
 
 // hide dialogue box if empty
 window.conversationStart = function (ev) {
-    console.log(ev);
-    
+
 	if (ev.passage["name"] == "End conversation") {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
