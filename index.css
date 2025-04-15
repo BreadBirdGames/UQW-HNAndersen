@@ -41,7 +41,7 @@ html, body {
 
 #log-button, #camera-button {
   	margin-top: -2.5vh;
-	width: 50vw;
+	width: 49.5vw;
   	height: 10vh;
   	background-color: var(--color-5);
   	border: none;
@@ -57,10 +57,12 @@ html, body {
 
 #log-button {
 	border-top-right-radius: 10px;
+    box-shadow: 2px 0px 0px 0px var(--color-1);
 }
 
 #camera-button {
 	border-top-left-radius: 10px;
+    box-shadow: -2px 0px 0px 0px var(--color-1);
 }
 
 .tabs {

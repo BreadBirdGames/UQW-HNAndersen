@@ -2,6 +2,21 @@ const thumbnails = {
     "Kaptain": "img/Kaptajn_Jakob.png"
 }
 
+const characters = {
+    "Person0": "Kaptajn",
+    "Person1": "Matros",
+    "Person2": undefined,
+    "Person3": undefined,
+    "Person4": undefined,
+    "Person5": undefined,
+    "Person6": undefined,
+    "Person7": undefined,
+    "Person8": undefined,
+    "Person9": undefined
+}
+
+window.conversing = false;
+
 const thumbnailImage = document.createElement("img");
 thumbnailImage.id = "thumbnail";
 document.body.appendChild(thumbnailImage);
@@ -97,10 +112,12 @@ function setResult(result) {
         return;
     }
 
-    // if (result.data in characters.keys()) {
-    window.Engine.play("Person1");
-    console.log(result.data);
-    // }
+    if (result.data in Object.keys(characters)) {
+        if (characters[result.data] != undefined) {
+            window.conversationPlay(characters[result.data]);
+            console.log(result.data);
+        }
+    }
 }
 
 // initialize QR video;
@@ -116,13 +133,28 @@ scanner.start();
 
 const dialogueBox = document.getElementById("story");
 
+window.conversationPlay = function(passageName) {
+    if (!window.conversing) {
+        return
+    }
+
+    window.Engine.play(passageName)
+};
+
 // hide dialogue box if empty
 window.conversationStart = function (ev) {
+    console.log(ev);
 
 	if (ev.passage["name"] == "End conversation") {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
+        window.conversing = false;
+    } else if (ev == false) {
+        dialogueBox.classList.add("hidden");
+        thumbnailImage.src = "";
+        window.conversing = false;
     } else {
         dialogueBox.classList.remove("hidden");
+        window.conversing = true;
     }
 };
