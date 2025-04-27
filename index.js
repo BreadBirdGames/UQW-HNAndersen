@@ -1,5 +1,5 @@
 const thumbnails = {
-    "Kaptain": "img/Kaptajn.png",
+    "Kaptajn": "img/Kaptajn.png",
     "Matros" : "img/Matros.jpg"
 }
 
@@ -148,5 +148,9 @@ window.conversationStart = function (ev) {
     } else {
         dialogueBox.classList.remove("hidden");
         window.conversing = true;
+
+        if (thumbnails[ev["passage"]["name"]] != undefined) {
+            window.display_thumbnail(ev["passage"]["name"]);
+        }
     }
 };
