@@ -145,11 +145,7 @@ window.conversationStart = function (ev) {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
-    }/* else if (ev == false) {
-        dialogueBox.classList.add("hidden");
-        thumbnailImage.src = "";
-        window.conversing = false;
-    } */else {
+    } else {
         dialogueBox.classList.remove("hidden");
         window.conversing = true;
     }
