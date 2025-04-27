@@ -1,5 +1,6 @@
 const thumbnails = {
-    "Kaptain": "img/Kaptajn_Jakob.png"
+    "Kaptain": "img/Kaptajn.png",
+    "Matros" : "img/Matros.jpg"
 }
 
 const characters = {
@@ -112,11 +113,8 @@ function setResult(result) {
         return;
     }
 
-    if (result.data in Object.keys(characters)) {
-        if (characters[result.data] != undefined) {
-            window.conversationPlay(characters[result.data]);
-            console.log(result.data);
-        }
+    if (characters[result.data] != undefined) {
+        window.conversationPlay(characters[result.data]);
     }
 }
 
@@ -134,7 +132,7 @@ scanner.start();
 const dialogueBox = document.getElementById("story");
 
 window.conversationPlay = function(passageName) {
-    if (!window.conversing) {
+    if (window.conversing) {
         return
     }
 
@@ -143,17 +141,15 @@ window.conversationPlay = function(passageName) {
 
 // hide dialogue box if empty
 window.conversationStart = function (ev) {
-    console.log(ev);
-
-	if (ev.passage["name"] == "End conversation") {
+    if (ev == undefined || ev["passage"]["name"] == "End samtale") {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
-    } else if (ev == false) {
+    }/* else if (ev == false) {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
-    } else {
+    } */else {
         dialogueBox.classList.remove("hidden");
         window.conversing = true;
     }

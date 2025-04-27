@@ -112,14 +112,16 @@ function getAllMethods(object) {
     });
 }
 
-window.runFunction = function(name, args) {
+/*window.runFunction = function(name, args) {
 	if (name == null) {
     	return;
     }
   
   	if (getAllMethods(window).includes(name)) {
       	if (!window.ready) {
-        	setTimeout(function(){window.runFunction(name,args)}, 200);
+        	setTimeout(
+              function() {window.runFunction(name,args)}, 
+            200);
         }
       
     	var argString = "";
@@ -134,13 +136,16 @@ window.runFunction = function(name, args) {
 
     	eval("window." + name + "(" + argString + ")");
     } else {
-    	console.log(name + " Does not exists");
+      	console.log(name + " does not exist");
+    	setTimeout(
+            function() {window.runFunction(name,args)}, 
+        200);
     }
-}
+}*/
 
 
 window.display_thumbnail = function() {};
-window.conversationStart = function() {};
+//window.conversationStart = function() {};
 
 /* Execute the handler function exactly once, since it's only fired once. */
 $(document).one(':storyready', function (ev) {
@@ -151,23 +156,24 @@ $(document).one(':storyready', function (ev) {
 	    myScript.setAttribute("src", "/index.js");
       	document.body.appendChild(myScript);
       
-      	window.runFunction("conversationStart", false);
+      	//window.runFunction("conversationStart", false);
       	window.ready = true;
     }, 20);
 });
 
-$(document).on(':passagestart', function(ev) { 					testConversationStart(ev)
-});
-
-function testConversationStart(ev) {
+window.testConversationStart = function (ev) {
 	if (typeof window.conversationStart != "function") {
     	setTimeout(function() {
-        	testConversationStart(ev)
-        }, 20);
+        	testConversationStart(ev);
+        }, 500);
     } else {
     	window.conversationStart(ev);
     }
-};</script><tw-passagedata pid="1" name="End samtale" tags="" position="700,400" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Matros" tags="" position="700,675" size="100,100">&lt;&lt;if $questState is 1&gt;&gt; 
+};
+
+$(document).on(':passagestart', function(ev) {
+  	window.testConversationStart(ev);
+});</script><tw-passagedata pid="1" name="End samtale" tags="" position="700,400" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Matros" tags="" position="700,675" size="100,100">&lt;&lt;if $questState is 1&gt;&gt; 
 	Hvad vil du mig?
 	[[Kaptajnen siger du skal vaske gulvet]]
 &lt;&lt;elseif $questState is 2&gt;&gt;
