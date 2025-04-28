@@ -19,7 +19,7 @@ html, body {
 @font-face {
     font-family: jackArmstrong;
     src: url("Jack\ Armstrong.ttf");
-  }
+}
 
 #ui-bar {
 	display: none;
