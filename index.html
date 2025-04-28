@@ -112,7 +112,7 @@ function getAllMethods(object) {
     });
 }
 
-/*window.runFunction = function(name, args) {
+window.runFunction = function(name, args) {
 	if (name == null) {
     	return;
     }
@@ -121,13 +121,13 @@ function getAllMethods(object) {
       	if (!window.ready) {
         	setTimeout(
               function() {window.runFunction(name,args)}, 
-            200);
+            200);1
         }
       
     	var argString = "";
-
- 		for (var i = 0;i<args.length; i++) {
-          	argString += args[i];
+      	
+      	for (var i = 0;i<args.length; i++) {
+        	argString += args[i];
           
 			if (args[i+1] != undefined) {
             	argString = argString + ",";
@@ -141,11 +141,16 @@ function getAllMethods(object) {
             function() {window.runFunction(name,args)}, 
         200);
     }
-}*/
+}
 
 
 window.display_thumbnail = function() {};
 //window.conversationStart = function() {};
+window.updateObjective = function(data) {
+	setTimeout(function() {
+    	window.updateObjective(data);
+    }, 200);
+};
 
 /* Execute the handler function exactly once, since it's only fired once. */
 $(document).one(':storyready', function (ev) {
@@ -173,7 +178,9 @@ window.testConversationStart = function (ev) {
 
 $(document).on(':passagestart', function(ev) {
   	window.testConversationStart(ev);
-});</script><tw-passagedata pid="1" name="End samtale" tags="" position="700,400" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="Matros" tags="" position="700,675" size="100,100">&lt;&lt;if $questState is 1&gt;&gt; 
+});</script><tw-passagedata pid="1" name="End samtale" tags="" position="700,400" size="100,100">&lt;&lt;if $questState is 1&gt;&gt;
+&lt;&lt;run window.updateObjective(&quot;Fortel matros han skal vaske gulvet&quot;);&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Matros" tags="" position="700,675" size="100,100">&lt;&lt;if $questState is 1&gt;&gt; 
 	Hvad vil du mig?
 	[[Kaptajnen siger du skal vaske gulvet]]
 &lt;&lt;elseif $questState is 2&gt;&gt;
@@ -189,7 +196,6 @@ $(document).on(':passagestart', function(ev) {
 	[[End samtale]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Kaptajn" tags="" position="700,250" size="100,100">&lt;&lt;if $questState is 1&gt;&gt;
 Hvorfor taler du til mig? fortæl matrossen han skal vaske gulvet!
-
 [[End samtale]]
 &lt;&lt;elseif $questState is 2&gt;&gt;
 Hvad er statusen på matros?

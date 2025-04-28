@@ -26,8 +26,6 @@ function display_thumbnail(str) {
     if (!window.ready) {
         return;
     }
-
-    console.log(str);
     
     if (str in thumbnails) {
         thumbnailImage.src = thumbnails[str];
@@ -56,10 +54,25 @@ resetButton.addEventListener("click", function() {
 });
 resetButton.innerHTML = "RESET";
 
+// Object labels!
+const currentObjectiveTitle = document.createElement("h1");
+currentObjectiveTitle.id = "objective-Title";
+currentObjectiveTitle.innerText = "Current objective: ";
+
+window.currentObjective = document.createElement("b");
+window.currentObjective.id = "objective-label";
+window.currentObjective.innerText = "objective.";
+
+window.updateObjective = function(newObjective) {
+    window.currentObjective.innerText = newObjective;
+}
+
 const tabL = document.createElement("div");
 tabL.id = "left-tab";
 tabL.classList.add("tabs");
 tabL.appendChild(resetButton);
+tabL.appendChild(currentObjectiveTitle);
+tabL.appendChild(window.currentObjective);
 
 const tabR = document.createElement("div");
 tabR.id = "right-tab";
