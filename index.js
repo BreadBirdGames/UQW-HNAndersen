@@ -114,7 +114,7 @@ document.body.appendChild(virtRoot);
 
 // ####### Web Cam Scanning #######
 
-import QrScanner from "/qr-scanner.min.js";
+import QrScanner from "./qr-scanner.min.js";
 
 // Function for setting result 
 function setResult(result) {
