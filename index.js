@@ -48,9 +48,18 @@ fontAwesomeLink.rel = "stylesheet";
 fontAwesomeLink.href = "font-awesome/css/all.min.css"
 document.head.appendChild(fontAwesomeLink);
 
+// Reset button!
+const resetButton = document.createElement("button");
+resetButton.id = "reset-button";
+resetButton.addEventListener("click", function() {
+    window.Engine.restart();
+});
+resetButton.innerHTML = "RESET";
+
 const tabL = document.createElement("div");
 tabL.id = "left-tab";
 tabL.classList.add("tabs");
+tabL.appendChild(resetButton);
 
 const tabR = document.createElement("div");
 tabR.id = "right-tab";
