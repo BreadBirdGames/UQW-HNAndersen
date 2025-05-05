@@ -163,7 +163,7 @@ window.conversationPlay = function(passageName) {
 
 // hide dialogue box if empty
 window.conversationStart = function (ev) {
-    if (ev == undefined || ev["passage"]["name"] == "End samtale") {
+    if (ev == undefined || ev["passage"]["name"] == "End conversation") {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
