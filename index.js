@@ -1,11 +1,11 @@
 const thumbnails = {
-    "Kaptajn": "img/Kaptajn.png",
-    "Matros" : "img/Matros.jpg"
+    "HNAndersen": "img/Kaptajn.png",
+    "Sailor" : "img/Matros.jpg"
 }
 
 const characters = {
-    "Person0": "Kaptajn",
-    "Person1": "Matros",
+    "Person0": "HNAndersen",
+    "Person1": "Sailor",
     "Person2": undefined,
     "Person3": undefined,
     "Person4": undefined,
@@ -53,6 +53,13 @@ resetButton.addEventListener("click", function() {
     window.Engine.restart();
 });
 resetButton.innerHTML = "RESET";
+
+const errorResetButton = document.createElement("button");
+errorResetButton.id = "error-reset-button";
+errorResetButton.addEventListener("click", function() {
+    window.Engine.restart();
+});
+errorResetButton.innerHTML = "RESET";
 
 // Object labels!
 const currentObjectiveTitle = document.createElement("h1");
@@ -145,6 +152,7 @@ const scanner = new QrScanner(qrVideo, result => setResult(result), {
     onDecodeError: error => {},
     highlightScanRegion: true,
     highlightCodeOutline: true,
+    maxScansPerSecond: 5
 });
 
 scanner.start();
@@ -167,12 +175,19 @@ window.conversationStart = function (ev) {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
+        scanner.start();
     } else {
         dialogueBox.classList.remove("hidden");
         window.conversing = true;
+        scanner.stop();
 
         if (thumbnails[ev["passage"]["name"]] != undefined) {
             window.display_thumbnail(ev["passage"]["name"]);
         }
+    }
+
+    var errorViews = document.getElementsByClassName("error-view");
+    if (errorViews.length > 0) {
+        errorViews[0].appendChild(errorResetButton);
     }
 };
