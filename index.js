@@ -1,6 +1,8 @@
+// This should only be used for characters, keep scene sprites in another system
 const thumbnails = {
     "HNAndersen": "img/Kaptajn.png",
-    "Sailor" : "img/Matros.jpg"
+    "Sailor" : "img/Matros.jpg",
+    "End Game" : "img/BreadBirdGames.png"
 }
 
 const characters = {
