@@ -30,6 +30,7 @@ function display_thumbnail(str) {
     }
     
     if (str in thumbnails) {
+        thumbnailImage.classList.remove("hidden");
         thumbnailImage.src = thumbnails[str];
     }
 }
@@ -174,7 +175,8 @@ window.conversationPlay = function(passageName) {
 window.conversationStart = function (ev) {
     if (ev == undefined || ev["passage"]["name"] == "End conversation") {
         dialogueBox.classList.add("hidden");
-        thumbnailImage.src = "img/null.png";
+        thumbnailImage.src = "";
+        thumbnailImage.classList.add("hidden");
         window.conversing = false;
     } else {
         dialogueBox.classList.remove("hidden");
