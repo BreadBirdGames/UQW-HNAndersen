@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import "index.css"</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
+	<tw-storydata name="index" startnode="3" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import "index.css"</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
 
 function getAllMethods(object) {
     return Object.getOwnPropertyNames(object).filter(function(property) {
@@ -195,18 +195,17 @@ $(document).on(':passagestart', function(ev) {
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Sailor" tags="" position="400,600" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 &lt;&lt;if $questStage is 2&gt;&gt;\
 What do you want?
-
+\&lt;&lt;/type&gt;&gt;
 [[What happened to the EAC after the school ship Copenhagen sank?]] 
 &lt;&lt;elseif $questStage is 4&gt;&gt;\
 What now?
-
+\&lt;&lt;/type&gt;&gt;
 [[What&#39;s the best ship in the history of the EAC?]] 
 &lt;&lt;else&gt;&gt;\
 Scram buddy
-
+\&lt;&lt;/type&gt;&gt;
 [[End conversation]] 
-\&lt;&lt;/if&gt;&gt;
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="HNAndersen" tags="" position="400,200" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
+\&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="HNAndersen" tags="" position="400,200" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 &lt;&lt;if $questStage is 1&gt;&gt;\
 Have you found out what happened with the school ship?
 
@@ -289,9 +288,8 @@ What happened?
 The second world war was what happened.
 I gotta go back to doing... important things
 Scram and go research it yourself!
-&lt;&lt;set $questStage to 3&gt;&gt;
-[[End conversation]] 
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="So during the second world war-" tags="" position="700,25" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
+&lt;&lt;set $questStage to 3&gt;&gt;\&lt;&lt;/type&gt;&gt;
+[[End conversation]] </tw-passagedata><tw-passagedata pid="14" name="So during the second world war-" tags="" position="700,25" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 The second what now?
 Do you mean the great war wasn&#39;t the last one?
 
@@ -340,17 +338,14 @@ you could ask the sailor
 [[End conversation]]
 \&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="What&#39;s the best ship in the history of the EAC?" tags="" position="250,600" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 That&#39;s a vague question, I think the most &quot;objective&quot; one would be the Jutlandia.
-
-[[What was up with the Jutlandia?]]
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="What was up with the Jutlandia?" tags="" position="250,750" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
+\&lt;&lt;/type&gt;&gt;
+[[What was up with the Jutlandia?]]</tw-passagedata><tw-passagedata pid="24" name="What was up with the Jutlandia?" tags="" position="250,750" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 Jutlandia stayed in dry dock during world war 2 and served as a medical ship during the korean war
-
-[[Thanks!]]
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Thanks!" tags="" position="400,750" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
+\&lt;&lt;/type&gt;&gt;
+[[Thanks!]]</tw-passagedata><tw-passagedata pid="25" name="Thanks!" tags="" position="400,750" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 Yeah, yeah, screw off
-&lt;&lt;set $questStage to 5&gt;&gt;
-[[End conversation]] 
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="EAC created a great ship called the Jutlandia" tags="" position="400,50" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
+&lt;&lt;set $questStage to 5&gt;&gt;\&lt;&lt;/type&gt;&gt;
+[[End conversation]] </tw-passagedata><tw-passagedata pid="26" name="EAC created a great ship called the Jutlandia" tags="" position="400,50" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
 Oh that&#39;s good, what did it do?
 
 [[The Jutlandia helped people during a war in Korea as a medical ship, it also stayed in dock during world war 2]]
