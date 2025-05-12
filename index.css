@@ -110,7 +110,7 @@ html, body {
 
 #thumbnail {
     position: fixed;
-    bottom: 10vh;
+    top: 0;
     right: 0;
     z-index: 2;
     width: 100vw;
