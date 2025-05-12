@@ -117,6 +117,10 @@ html, body {
     width: 100vw;
 }
 
+#thumbnail[src="img/null.png"] {
+    height: 0;
+}
+
 #story {
     position: fixed;
     bottom: 0;
