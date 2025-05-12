@@ -75,6 +75,23 @@ window.currentObjective.innerText = "objective.";
 
 window.updateObjective = function(newObjective) {
     window.currentObjective.innerText = newObjective;
+
+    new Notify ({
+        status: 'success',
+        title: 'New Objective!',
+        text: newObjective,
+        effect: 'slide',
+        speed: 300,
+        showIcon: false,
+        showCloseButton: true,
+        autoclose: true,
+        autotimeout: 3000,
+        notificationsGap: null,
+        notificationsPadding: null,
+        type: 'outline',
+        position: 'left bottom',
+        customWrapper: '',
+    })
 }
 
 const tabL = document.createElement("div");

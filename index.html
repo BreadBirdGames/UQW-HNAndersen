@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="3" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import "index.css"</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
+	<tw-storydata name="index" startnode="3" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("./index.css")</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
 
 function getAllMethods(object) {
     return Object.getOwnPropertyNames(object).filter(function(property) {
@@ -160,6 +160,10 @@ $(document).one(':storyready', function (ev) {
       	myScript.setAttribute("type", "module");
 	    myScript.setAttribute("src", "./index.js");
       	document.body.appendChild(myScript);
+     
+      	var myNotifyScript = document.createElement("script");
+	    myNotifyScript.setAttribute("src", "./simple-notify.min.js");
+      	document.head.appendChild(myNotifyScript);
       
       	//window.runFunction("conversationStart", false);
       	window.ready = true;
