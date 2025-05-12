@@ -180,6 +180,7 @@ window.conversationStart = function (ev) {
         window.conversing = false;
     } else {
         dialogueBox.classList.remove("hidden");
+        thumbnailImage.classList.remove("hidden");
         window.conversing = true;
 
         if (thumbnails[ev["passage"]["name"]] != undefined) {
