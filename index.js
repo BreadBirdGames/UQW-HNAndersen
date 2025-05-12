@@ -73,9 +73,13 @@ window.currentObjective = document.createElement("b");
 window.currentObjective.id = "objective-label";
 window.currentObjective.innerText = "objective.";
 
+const notifcationSound = new Audio("./NotificationSound.wav");
+notifcationSound.autoplay = true;
+
 window.updateObjective = function(newObjective) {
     window.currentObjective.innerText = newObjective;
 
+    notifcationSound.play();
     new Notify ({
         status: 'success',
         title: 'New Objective!',
