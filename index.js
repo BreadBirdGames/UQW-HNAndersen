@@ -153,8 +153,7 @@ function setResult(result) {
 const scanner = new QrScanner(qrVideo, result => setResult(result), {
     onDecodeError: error => {},
     highlightScanRegion: true,
-    highlightCodeOutline: true,
-    maxScansPerSecond: 5
+    highlightCodeOutline: true
 });
 
 scanner.start();
