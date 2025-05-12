@@ -174,7 +174,7 @@ window.conversationPlay = function(passageName) {
 window.conversationStart = function (ev) {
     if (ev == undefined || ev["passage"]["name"] == "End conversation") {
         dialogueBox.classList.add("hidden");
-        thumbnailImage.src = "";
+        thumbnailImage.src = "img/null.png";
         window.conversing = false;
     } else {
         dialogueBox.classList.remove("hidden");
