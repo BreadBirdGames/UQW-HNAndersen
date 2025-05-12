@@ -175,11 +175,9 @@ window.conversationStart = function (ev) {
         dialogueBox.classList.add("hidden");
         thumbnailImage.src = "";
         window.conversing = false;
-        scanner.start();
     } else {
         dialogueBox.classList.remove("hidden");
         window.conversing = true;
-        scanner.stop();
 
         if (thumbnails[ev["passage"]["name"]] != undefined) {
             window.display_thumbnail(ev["passage"]["name"]);
