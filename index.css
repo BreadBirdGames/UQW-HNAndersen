@@ -178,6 +178,7 @@ html, body {
   grid-gap: var(--sn-notifications-gap);
   gap: var(--sn-notifications-gap);
   padding: var(--sn-notifications-padding);
+  margin-bottom: 100px;
 }
 .sn-notifications-container.sn-is-x-center {
   justify-content: center;
@@ -215,7 +216,7 @@ html, body {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: scroll;
   position: fixed;
   bottom: 10px;
   left: 10px;
