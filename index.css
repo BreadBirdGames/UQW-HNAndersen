@@ -216,7 +216,9 @@ html, body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
   text-decoration: none;
   width: var(--sn-notify-width);
   margin-bottom: 50px;
