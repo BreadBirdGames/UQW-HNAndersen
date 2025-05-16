@@ -74,27 +74,12 @@ window.currentObjective.id = "objective-label";
 window.currentObjective.innerText = "objective.";
 
 const notifcationSound = new Audio("./NotificationSound.wav");
-notifcationSound.autoplay = true;
 
 window.updateObjective = function(newObjective) {
     window.currentObjective.innerText = newObjective;
 
     notifcationSound.play();
-    new Notify ({
-        status: 'success',
-        title: 'New Objective!',
-        text: newObjective,
-        effect: 'slide',
-        speed: 300,
-        showIcon: false,
-        showCloseButton: true,
-        autoclose: false,
-        autotimeout: 3000,
-        notificationsGap: null,
-        notificationsPadding: null,
-        type: 'outline',
-        position: 'left bottom',
-    })
+    setTimeout(function(){alert(newObjective);},1200);
 }
 
 const tabL = document.createElement("div");
