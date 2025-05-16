@@ -76,6 +76,10 @@ html, body {
 .link-internal {
     color: var(--color-3);
     /*font-family: "jackArmstrong";*/
+    border: 2px solid var(--color-3);
+    border-radius: 10px;
+    padding: 5px;
+    display:block;
 }
 
 #log-button {
