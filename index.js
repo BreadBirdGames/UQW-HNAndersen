@@ -55,14 +55,14 @@ resetButton.id = "reset-button";
 resetButton.addEventListener("click", function() {
     window.Engine.restart();
 });
-resetButton.innerHTML = "RESET";
+resetButton.innerHTML = "RESET GAME (DO NOT PRESS...)";
 
 const errorResetButton = document.createElement("button");
 errorResetButton.id = "error-reset-button";
 errorResetButton.addEventListener("click", function() {
     window.Engine.restart();
 });
-errorResetButton.innerHTML = "RESET";
+errorResetButton.innerHTML = "RESET GAME (DO NOT PRESS...)";
 
 // Object labels!
 const currentObjectiveTitle = document.createElement("h1");
@@ -90,7 +90,7 @@ window.updateObjective = function(newObjective) {
         showCloseButton: true,
         autoclose: true,
         autotimeout: 3000,
-        notificationsGap: null,
+        notificationsGap: 100,
         notificationsPadding: null,
         type: 'outline',
         position: 'left bottom',

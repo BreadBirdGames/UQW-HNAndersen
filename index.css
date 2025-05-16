@@ -61,7 +61,8 @@ html, body {
     background-color: var(--color-2);
 }
 
-#reset-button {
+#reset-button, #error-reset-button {
+    background-color: red;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -133,13 +134,6 @@ html, body {
 
 .hidden {
     display: none !important;
-}
-
-#error-reset-button {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .sn-notifications-container {
