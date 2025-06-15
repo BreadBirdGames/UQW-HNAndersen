@@ -52,14 +52,14 @@ document.head.appendChild(fontAwesomeLink);
 const resetButton = document.createElement("button");
 resetButton.id = "reset-button";
 resetButton.addEventListener("click", function () {
-  window.Engine.restart();
+  window.restart();
 });
 resetButton.innerHTML = "RESET GAME PROGRESS";
 
 const errorResetButton = document.createElement("button");
 errorResetButton.id = "error-reset-button";
 errorResetButton.addEventListener("click", function () {
-  window.Engine.restart();
+  window.restart();
 });
 errorResetButton.innerHTML = "RESET GAME PROGRESS";
 
