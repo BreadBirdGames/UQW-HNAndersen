@@ -1,7 +1,7 @@
 // This should only be used for characters, keep scene sprites in another system
 const thumbnails = {
-  HNAndersen: "img/Kaptajn.png",
-  Sailor: "img/Matros.jpg",
+  HNAndersen: "assets/Kaptajn.png",
+  Sailor: "assets/Matros.jpg",
 };
 
 const characters = {
@@ -72,7 +72,7 @@ window.currentObjective = document.createElement("b");
 window.currentObjective.id = "objective-label";
 window.currentObjective.innerText = "objective.";
 
-const notifcationSound = new Audio("./NotificationSound.wav");
+const notifcationSound = new Audio("assets/NotificationSound.wav");
 
 window.updateObjective = function (newObjective) {
   window.currentObjective.innerText = newObjective;
