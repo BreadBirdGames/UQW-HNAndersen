@@ -180,9 +180,8 @@ const scanner = new QrScanner(qrVideo, (result) => setResult(result), {
 
 scanner.start();
 
-// ###########3 idfk
-
 const dialogueBox = document.getElementById("story");
+dialogueBox.style.paddingTop = "1rem";
 
 window.conversationPlay = function (passageName) {
   if (window.conversing) {
