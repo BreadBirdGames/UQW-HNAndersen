@@ -16,6 +16,5 @@ $(buildDir):
 
 build: $(buildDir) copyLibs copyAssets
 	for file in $(srcFiles) ; do \
-		minify $$file > $(buildDir)/$$file \
-		# echo $$file ; \
+		minify $$file > $(buildDir)/$$file ; \
 	done
