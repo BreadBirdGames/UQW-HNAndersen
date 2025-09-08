@@ -2,6 +2,7 @@
 const thumbnails = {
   HNAndersen: "assets/Kaptajn.png",
   Sailor: "assets/Matros.jpg",
+  "End Game": "",
 };
 
 const characters = {

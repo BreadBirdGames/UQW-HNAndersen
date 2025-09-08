@@ -188,11 +188,11 @@ window.testConversationStart = function (ev) {
 $(document).on(':passagestart', function(ev) {
   	window.testConversationStart(ev);
 });</script><tw-passagedata pid="1" name="End conversation" tags="" position="400,400" size="100,100">&lt;&lt;if $questStage is 1&gt;&gt;\
-&lt;&lt;run window.updateObjective(&quot;Find out what happend to the school ship and when &quot;);&gt;&gt;\
+&lt;&lt;run window.updateObjective(&quot;Find out when the school ship disappeared&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 2&gt;&gt;\
 &lt;&lt;run window.updateObjective(&quot;Find the Sailor&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 3&gt;&gt;\
-&lt;&lt;run window.updateObjective(&quot;Research the second world war and how long did it last?&quot;);&gt;&gt;\
+&lt;&lt;run window.updateObjective(&quot;Return to H.N. Andersen&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 4&gt;&gt;\
 &lt;&lt;run window.updateObjective(&quot;Find out which of the EAC&#39;s ships is the most known one&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 5&gt;&gt;\
@@ -202,7 +202,7 @@ $(document).on(':passagestart', function(ev) {
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Sailor" tags="" position="400,600" size="100,100">&lt;&lt;if $questStage is 2&gt;&gt;\
 What do you want?
 
-[[What happened to the EAC after the school ship Copenhagen sank?]] 
+[[What happened to the EAC after the school ship Copenhagen disappeared?]] 
 &lt;&lt;elseif $questStage is 4&gt;&gt;\
 What now?
 
@@ -214,7 +214,7 @@ Scram buddy
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="HNAndersen" tags="" position="400,200" size="100,100">&lt;&lt;if $questStage is 1&gt;&gt;\
 Have you found out what happened with the school ship?
 
-[[the school ship sank]]
+[[the school ship disappeared]]
 [[End conversation]]
 &lt;&lt;elseif $questStage is 2&gt;&gt;\
 The sailor is by the ships, you should probably talk to him
@@ -244,34 +244,33 @@ yes I am talking to you, can you help me?
 [[Sure, what&#39;s up?]]
 \&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Sure, what&#39;s up?" tags="" position="550,200" size="100,100">I don&#39;t know where I am, the last thing I remember is the school ship
 
-[[...]]</tw-passagedata><tw-passagedata pid="5" name="..." tags="" position="550,225" size="100,100">I... don&#39;t know how many years it&#39;s been but I can&#39;t dwell on that.
+[[...]]</tw-passagedata><tw-passagedata pid="5" name="..." tags="" position="550,225" size="100,100">I... don&#39;t know how many years it&#39;s been.
+Can you find out?
 &lt;&lt;set $questStage to 1&gt;&gt;
-[[End conversation]]</tw-passagedata><tw-passagedata pid="6" name="1945" tags="" position="125,25" size="100,100">That feels a bit too high
+[[End conversation]]</tw-passagedata><tw-passagedata pid="6" name="1945" tags="" position="125,25" size="100,100">That feels a bit too late
 
-[[It sank in...]]</tw-passagedata><tw-passagedata pid="7" name="It sank in..." tags="" position="75,50" size="100,100">&lt;&lt;type 30ms&gt;&gt;\
-What year was it?
+[[It sank in...]]</tw-passagedata><tw-passagedata pid="7" name="It sank in..." tags="" position="75,50" size="100,100">What year was it?
 
 [[1900]]
 [[1969]]
 [[1928]]
-[[1945]]
-\&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="1969" tags="" position="75,25" size="100,100">That&#39;s a bit out of this world
+[[1945]]</tw-passagedata><tw-passagedata pid="8" name="1969" tags="" position="75,25" size="100,100">That&#39;s a bit out of this world
 
 [[It sank in...]]</tw-passagedata><tw-passagedata pid="9" name="1928" tags="" position="25,50" size="100,100">So long ago?!
-No, no, no... I must know more, what happened to the foundation?
+I must know more, what happened to the foundation?
 
 [[Relax...]]</tw-passagedata><tw-passagedata pid="10" name="1900" tags="" position="100,25" size="100,100">I don&#39;t think that&#39;s right
 
 [[It sank in...]]</tw-passagedata><tw-passagedata pid="11" name="Relax..." tags="" position="25,75" size="100,100">Okay, okay...
 Could you maybe talk to the sailor? You can probably find him by the ships
 &lt;&lt;set  $questStage to 2&gt;&gt;
-[[End conversation]]</tw-passagedata><tw-passagedata pid="12" name="the school ship sank" tags="" position="175,50" size="100,100">Oh that... makes sense
-When did it sink?
+[[End conversation]]</tw-passagedata><tw-passagedata pid="12" name="the school ship disappeared" tags="" position="175,50" size="100,100">Oh yeah, I remember.
+When did it disappear?
 
 [[1900]]
 [[1969]]
 [[1928]]
-[[1945]]</tw-passagedata><tw-passagedata pid="13" name="What happened to the EAC after the school ship Copenhagen sank?" tags="" position="550,600" size="100,100">What happened? 
+[[1945]]</tw-passagedata><tw-passagedata pid="13" name="What happened to the EAC after the school ship Copenhagen disappeared?" tags="" position="550,600" size="100,100">What happened? 
 The second world war was what happened.
 I was working hard between 1939-1945
 &lt;&lt;set $questStage to 3&gt;&gt;
