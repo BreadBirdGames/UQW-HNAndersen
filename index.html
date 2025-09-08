@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="31" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("./index.css")</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
+	<tw-storydata name="index" startnode="29" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="B3B21878-5DE6-4F62-B5E7-C09E21CF0F73" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("./index.css")</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.ready = false;
 
 function getAllMethods(object) {
     return Object.getOwnPropertyNames(object).filter(function(property) {
@@ -192,7 +192,7 @@ $(document).on(':passagestart', function(ev) {
 &lt;&lt;elseif $questStage is 2&gt;&gt;\
 &lt;&lt;run window.updateObjective(&quot;Find the Sailor&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 3&gt;&gt;\
-&lt;&lt;run window.updateObjective(&quot;Research the second world war&quot;);&gt;&gt;\
+&lt;&lt;run window.updateObjective(&quot;Research the second world war and how long did it last?&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 4&gt;&gt;\
 &lt;&lt;run window.updateObjective(&quot;Find out which of the EAC&#39;s ships is the most known one&quot;);&gt;&gt;\
 &lt;&lt;elseif $questStage is 5&gt;&gt;\
@@ -258,7 +258,7 @@ What year was it?
 \&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="1969" tags="" position="75,25" size="100,100">That&#39;s a bit out of this world
 
 [[It sank in...]]</tw-passagedata><tw-passagedata pid="9" name="1928" tags="" position="25,50" size="100,100">So long ago?!
-No, no, no... I have to know more, what happened to the fond?
+No, no, no... I must know more, what happened to the foundation?
 
 [[Relax...]]</tw-passagedata><tw-passagedata pid="10" name="1900" tags="" position="100,25" size="100,100">I don&#39;t think that&#39;s right
 
@@ -273,8 +273,7 @@ When did it sink?
 [[1928]]
 [[1945]]</tw-passagedata><tw-passagedata pid="13" name="What happened to the EAC after the school ship Copenhagen sank?" tags="" position="550,600" size="100,100">What happened? 
 The second world war was what happened.
-I&#39;ve gotta go back to doing... important things
-Scram and go research it yourself!
+I was working hard between 1939-1945
 &lt;&lt;set $questStage to 3&gt;&gt;
 [[End conversation]] </tw-passagedata><tw-passagedata pid="14" name="So during the second world war-" tags="" position="700,25" size="100,100">The second what now?
 Do you mean the great war wasn&#39;t the last one?
@@ -314,29 +313,28 @@ you could ask the sailor
 [[End conversation]] </tw-passagedata><tw-passagedata pid="26" name="EAC created a great ship called the Jutlandia" tags="" position="550,50" size="100,100">Oh that&#39;s good, what did it do?
 
 [[The Jutlandia helped people during a war in Korea as a medical ship, it also stayed in dock during world war 2]]</tw-passagedata><tw-passagedata pid="27" name="The Jutlandia helped people during a war in Korea as a medical ship, it also stayed in dock during world war 2" tags="" position="700,300" size="100,100">That&#39;s great!
-So how are we today? if we&#39;ve done all this we have to be still be huge today.
+So how is the EAC foundation today?
 
-[[Sadly not]]</tw-passagedata><tw-passagedata pid="28" name="Sadly not" tags="" position="700,325" size="100,100">What&#39;s that supposed to mean?
+[[It&#39;s going great, we&#39;re actually standing in the EAC foundation house right now]]</tw-passagedata><tw-passagedata pid="28" name="It&#39;s going great, we&#39;re actually standing in the EAC foundation house right now" tags="" position="700,325" size="100,100">So the EAC foundation house?
 
-[[EAC no longer exists, it collapsed a while ago]]</tw-passagedata><tw-passagedata pid="29" name="EAC no longer exists, it collapsed a while ago" tags="" position="700,350" size="100,100">WHAT?! WHY?!
-What happened? could you go find out and return?
-
-[[Okay, I will]]</tw-passagedata><tw-passagedata pid="30" name="Okay, I will" tags="" position="700,375" size="100,100">Thank you, I can rest once I know.
-&lt;&lt;set $questStage to 6&gt;&gt;
-[[End conversation]]</tw-passagedata><tw-passagedata pid="31" name="Start" tags="" position="400,100" size="100,100">&lt;&lt;if $questStage is 1&gt;&gt;
+[[Yes]]</tw-passagedata><tw-passagedata pid="29" name="Start" tags="" position="400,100" size="100,100">&lt;&lt;if $questStage is 1&gt;&gt;
 &lt;&lt;goto End Conversation&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;goto HNAndersen&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="End Game" tags="" position="700,500" size="100,100">Thanks for playing! would you like to play again or exit?
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="End Game" tags="" position="700,500" size="100,100">Thanks for playing! would you like to play again or exit?
 
 [[I would like to exit]]
-[[I want to play again]]</tw-passagedata><tw-passagedata pid="33" name="I would like to exit" tags="" position="700,625" size="100,100">&lt;&lt;if localStorage.getItem(&quot;leftGame&quot;) neq &quot;true&quot;&gt;&gt;
+[[I want to play again]]</tw-passagedata><tw-passagedata pid="31" name="I would like to exit" tags="" position="700,625" size="100,100">&lt;&lt;if localStorage.getItem(&quot;leftGame&quot;) neq &quot;true&quot;&gt;&gt;
 &lt;&lt;run localStorage.setItem(&quot;leftGame&quot;, true)&gt;&gt;
 &lt;&lt;run window.location.href = &quot;https://asia-house.dk/&quot;;&gt;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;&lt;run window.runFunction(&quot;restart&quot;);&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="I want to play again" tags="" position="825,625" size="100,100">&lt;&lt;run window.restart();&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Yeah, it is" tags="" position="200,300" size="100,100">Thank you for letting my thoughts go to rest.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="I want to play again" tags="" position="825,625" size="100,100">&lt;&lt;run window.restart();&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Yeah, it is" tags="" position="200,300" size="100,100">Thank you for letting my thoughts go to rest.
 I myself will go rest now that I can do so, with a good conscience.
+
+[[End Game]]</tw-passagedata><tw-passagedata pid="34" name="Yes" tags="" position="700,350" size="100,100">All this text on the wall is our history?
+
+[[Right again]]</tw-passagedata><tw-passagedata pid="35" name="Right again" tags="" position="700,375" size="100,100">Thank you for letting my thoughts go to rest, I myself will rest now that I can do so, with a good conscience.
 
 [[End Game]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
