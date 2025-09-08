@@ -7,14 +7,9 @@ const thumbnails = {
 const characters = {
   Person0: "HNAndersen",
   Person1: "Sailor",
-  Person2: undefined,
-  Person3: undefined,
-  Person4: undefined,
-  Person5: undefined,
-  Person6: undefined,
-  Person7: undefined,
-  Person8: undefined,
-  Person9: undefined,
+  "127.0.0.1/": "HNAndersen",
+  "https://breadbirdgames.github.io/uqw-hnandersen/": "HNAndersen",
+  "https://asia-house.dk/uqw-hnandersen/": "HNAndersen"
 };
 
 window.conversing = false;
